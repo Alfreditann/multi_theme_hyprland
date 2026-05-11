@@ -46,6 +46,7 @@ else
     notify-send "Wallpaper Error" "Could not find the original wallpaper file."
 fi
 
+sleep 0.2
 echo "reloading"
 
 /home/will-main/Documents/multi_theme_hyprland/scripts/launch_waybar.sh
