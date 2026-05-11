@@ -1,0 +1,215 @@
+@import "jojo.css";
+
+* {
+    border: none;
+    border-radius: 0px;
+    font-family: "GeistMonoNerd Nerd Font Propo", "Adwaita Sans", sans-serif;
+    font-weight: bold;
+    font-size: 13px;
+    min-height: 0px;
+    padding: 0;
+    margin: 0;
+}
+
+window#waybar {
+    background: transparent;
+}
+
+/* ── Tooltip ── */
+
+tooltip {
+    background: @col1;
+    border: 2px solid @col3;
+    border-radius: 0px;
+}
+
+tooltip label {
+    color: @col4;
+    padding: 6px;
+}
+
+/* ── Workspaces ── */
+
+#workspaces {
+    background-color: @col1;
+    padding: 4px 6px;
+    margin: 0 0 0 12px;
+    border: 2px solid @border-black;
+    border-top: none;
+    border-bottom: 3px solid @col3;
+}
+
+#workspaces button {
+    padding: 0px 10px;
+    margin: 0px 2px;
+    border-radius: 0px;
+    color: @col4;
+    background-color: transparent;
+    border-bottom: 2px solid @col5;
+    transition: all 0.2s ease-in-out;
+}
+
+#workspaces button.active {
+    background-color: @col5;
+    color: @col4;
+    min-width: 50px;
+    border-bottom: 2px solid @col4;
+    transition: all 0.2s ease-in-out;
+}
+
+#workspaces button:hover {
+    background-color: @col5;
+    color: @col6;
+    border-bottom: 2px solid @col6;
+    min-width: 50px;
+}
+
+#workspaces button.urgent {
+    background-color: @col3;
+    color: @col1;
+    border-bottom: 2px solid @col4;
+    transition: all 0.2s ease-in-out;
+}
+
+/* ── Shared module base ── */
+
+#memory,
+#cava,
+#bluetooth,
+#disk,
+#user,
+#temperature,
+#cpu,
+#battery,
+#pulseaudio,
+#network,
+#clock,
+#tray,
+#custom-notification {
+    background-color: @col1;
+    padding: 0 14px;
+    margin: 0 3px;
+    color: @col4;
+    border-left: 1px solid @border-black;
+    border-right: 1px solid @border-black;
+    border-bottom: 3px solid @col5;
+}
+
+/* ── Clock ── */
+
+#clock {
+    color: @col4;
+    margin: 0 3px 0 10px;
+    border-bottom: 3px solid @col3;
+    letter-spacing: 1px;
+}
+
+/* ── User ── */
+
+#user {
+    color: @col3;
+    border-bottom: 3px solid @col3;
+}
+
+/* ── Cava ── */
+
+#cava {
+    color: @col3;
+    border-bottom: 3px solid @col5;
+    letter-spacing: 2px;
+    padding: 0 10px;
+}
+
+/* ── Pulseaudio ── */
+
+#pulseaudio {
+    color: @col4;
+    border-bottom: 3px solid @col6;
+}
+
+#pulseaudio.muted {
+    color: @col5;
+    border-bottom: 3px solid @col5;
+}
+
+/* ── Network ── */
+
+#network {
+    color: @col4;
+    border-bottom: 3px solid @nice-brown;
+}
+
+#network.disconnected {
+    color: @col3;
+    border-bottom: 3px solid @col3;
+}
+
+/* ── Battery ── */
+
+#battery {
+    color: @col4;
+    border-bottom: 3px solid @col4;
+}
+
+#battery.charging {
+    color: @bright-yellow;
+    border-bottom: 3px solid @bright-yellow;
+}
+
+#battery.warning:not(.charging) {
+    color: @col6;
+    border-bottom: 3px solid @col6;
+}
+
+#battery.critical:not(.charging) {
+    color: @col3;
+    border-bottom: 3px solid @col3;
+    animation: blink 0.5s steps(1) infinite;
+}
+
+@keyframes blink {
+    to { color: @col1; background-color: @col3; }
+}
+
+/* ── Temperature ── */
+
+#temperature {
+    color: @col4;
+    border-bottom: 3px solid @col5;
+}
+
+#temperature.critical {
+    color: @col3;
+    border-bottom: 3px solid @col3;
+}
+
+/* ── Disk ── */
+
+#disk {
+    color: @col4;
+    border-bottom: 3px solid @col5;
+}
+
+/* ── Tray ── */
+
+#tray {
+    border-bottom: 3px solid @border-black;
+    padding: 0 8px;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    border-bottom: 3px solid @col3;
+}
+
+/* ── Notification ── */
+
+#custom-notification {
+    color: @col4;
+    margin: 0 10px 0 3px;
+    border-bottom: 3px solid @col3;
+}

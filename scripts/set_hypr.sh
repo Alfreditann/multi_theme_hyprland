@@ -24,6 +24,11 @@ cat <<EOF > ~/.config/hypr/hyprlock.conf
 source = $HOME/Documents/multi_theme_hyprland/themes/$theme/Hypr/hyprlock.conf
 EOF
 
+touch ~/.config/kitty/kitty.conf
+cat <<EOF > ~/.config/kitty/kitty.conf
+include ~/Documents/multi_theme_hyprland/themes/$theme/Kitty/kitty.conf
+EOF
+
 # Select a random wallpaper from the directory
 original_path=$(find "$WALLPAPER_DIR" -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.webp" \) | shuf -n 1)
 
