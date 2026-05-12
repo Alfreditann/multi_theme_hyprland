@@ -3,6 +3,9 @@
 theme=$(jq -r '.theme' "$HOME/Documents/multi_theme_hyprland/themes/theme.json")
 THEME_DIR="$HOME/Documents/multi_theme_hyprland/themes" 
 CACHE_DIR="$HOME/.cache/theme-selector"
+echo $theme 
+echo $THEME_DIR
+echo $CACHE_DIR
 THUMBNAIL_WIDTH="250"  # Size of thumbnails in pixels (16:9)
 THUMBNAIL_HEIGHT="141"
 
