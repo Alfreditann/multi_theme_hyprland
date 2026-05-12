@@ -12,6 +12,7 @@ mkdir -p ~/.config/hypr
 touch ~/.config/hypr/hyprland.conf
 cat <<EOF > ~/.config/hypr/hyprland.conf
 \$theme = $theme
+\$mult = ~/Documents/multi_theme_hyprland
 
 source = $HOME/Documents/multi_theme_hyprland/themes/$theme/Hypr/hyprland.conf
 EOF
@@ -21,6 +22,11 @@ cat <<EOF > ~/.config/hypr/hyprlock.conf
 \$theme = $theme
 
 source = $HOME/Documents/multi_theme_hyprland/themes/$theme/Hypr/hyprlock.conf
+EOF
+
+touch ~/.config/kitty/kitty.conf
+cat <<EOF > ~/.config/kitty/kitty.conf
+include ~/Documents/multi_theme_hyprland/themes/$theme/Kitty/kitty.conf
 EOF
 
 # Select a random wallpaper from the directory
@@ -40,8 +46,10 @@ else
     notify-send "Wallpaper Error" "Could not find the original wallpaper file."
 fi
 
+sleep 0.2
 echo "reloading"
 
+/home/will-main/Documents/multi_theme_hyprland/scripts/launch_waybar.sh
 hyprctl reload
 
 #untested lua ver
