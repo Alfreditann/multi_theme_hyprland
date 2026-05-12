@@ -49,7 +49,7 @@ fi
 sleep 0.2
 echo "reloading"
 
-/home/will-main/Documents/multi_theme_hyprland/scripts/launch_waybar.sh
+bash $home/Documents/multi_theme_hyprland/scripts/launch_waybar.sh
 hyprctl reload
 
 #untested lua ver
