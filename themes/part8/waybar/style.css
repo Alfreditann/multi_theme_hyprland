@@ -1,0 +1,130 @@
+/* ===============================
+   BRIGHT PURPLE WAYBAR THEME
+   =============================== */
+
+* {
+    border: none;
+    border-radius: 0;
+
+    font-family: "JetBrainsMono Nerd Font", "GeistMonoNerd Nerd Font Propo", "sans-serif";
+    font-weight: bold;
+    font-size: 13px;
+
+    min-height: 0;
+    padding: 0;
+    margin: 0;
+}
+
+window#waybar {
+    background: transparent;
+}
+
+/* ===============================
+   TOOLTIPS
+   =============================== */
+tooltip {
+    background: rgba(70, 50, 145, 0.95);
+    border-radius: 12px;
+}
+
+tooltip label {
+    color: #e6dcff;
+    padding: 8px 12px;
+}
+
+/* ===============================
+   WORKSPACES
+   =============================== */
+#workspaces {
+    background-color: rgba(70, 50, 145, 0.82);
+    padding: 6px 4px;
+    margin: 0 0 0 12px;
+    border-radius: 12px;
+    box-shadow: 0 0 8px rgba(122, 92, 255, 0.2);
+}
+
+#workspaces button {
+    padding: 7px 12px;
+    margin: 0 4px;
+    border-radius: 12px;
+    background-color: #5a3ec8;
+    color: #e6dcff;
+    transition: all 0.2s ease;
+}
+
+#workspaces button.active {
+    background-color: #7a5cff;
+    color: #f7f3ff;
+    min-width: 50px;
+    font-size: 13px;
+    box-shadow: 0 0 8px rgba(122, 92, 255, 0.35);
+}
+
+#workspaces button:hover {
+    background-color: #7a5cff;
+    color: #f7f3ff;
+    border-radius: 12px;
+    min-width: 50px;
+}
+
+#workspaces button.urgent {
+    background-color: #7a5cff;
+    color: #f7f3ff;
+    border-radius: 12px;
+    min-width: 50px;
+    animation: pulse 1.2s infinite ease;
+}
+
+/* ===============================
+   MODULES
+   =============================== */
+#user,
+#temperature,
+#custom-memory,
+#battery,
+#pulseaudio,
+#network,
+#clock,
+#tray,
+#custom-notification {
+    background-color: rgba(70, 50, 145, 0.84);
+    padding: 8px 12px;
+    margin: 0 6px;
+    border-radius: 12px;
+    color: #e6dcff;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+#clock {
+    margin: 0 6px 0 10px;
+    color: #f7f3ff;
+}
+
+#custom-notification {
+    margin: 0 10px 0 6px;
+    color: #f7f3ff;
+}
+
+#pulseaudio:hover,
+#network:hover,
+#custom-memory:hover,
+#temperature:hover,
+#battery:hover,
+#clock:hover,
+#tray:hover,
+#custom-notification:hover {
+    background-color: #7a5cff;
+    color: #f7f3ff;
+}
+
+@keyframes pulse {
+    0% {
+        background-color: #5a3ec8;
+    }
+    50% {
+        background-color: #7a5cff;
+    }
+    100% {
+        background-color: #5a3ec8;
+    }
+}
