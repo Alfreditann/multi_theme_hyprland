@@ -116,6 +116,13 @@ tooltip label {
     background-color: #7a5cff;
     color: #f7f3ff;
 }
+#cava {
+    background-color: rgba(70, 50, 145, 0.84);
+    padding: 8px 12px;
+    margin: 0 6px;
+    border-radius: 12px;
+    color: #8973eb;
+}
 
 @keyframes pulse {
     0% {

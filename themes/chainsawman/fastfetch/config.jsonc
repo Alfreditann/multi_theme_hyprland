@@ -1,0 +1,203 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+
+  "logo": {
+    "source": "Arch",
+    "color": {
+      "1": "red",
+      "2": "bright_red"
+    },
+    "padding": {
+      "top": 1,
+      "left": 2,
+      "right": 4
+    }
+  },
+
+  "display": {
+    "separator": "  ",
+    "color": {
+      "separator": "yellow"
+    }
+  },
+
+  "modules": [
+    "break",
+
+    {
+      "type": "custom",
+      "format": "╭─── SYSTEM",
+      "outputColor": "yellow"
+    },
+
+    {
+      "type": "title",
+      "key": "│ USER",
+      "format": "{user-name}@{host-name}",
+      "keyColor": "red"
+    },
+
+    {
+      "type": "os",
+      "key": "│ OS",
+      "keyColor": "red"
+    },
+
+    {
+      "type": "kernel",
+      "key": "│ Kernel",
+      "keyColor": "red"
+    },
+
+    {
+      "type": "packages",
+      "key": "│ Packages",
+      "format": "{} (installed)",
+      "keyColor": "red"
+    },
+
+    {
+      "type": "shell",
+      "key": "│ Shell",
+      "keyColor": "red"
+    },
+
+    {
+      "type": "custom",
+      "format": "╰────────────────────────",
+      "outputColor": "yellow"
+    },
+
+    {
+      "type": "custom",
+      "format": "╭─── SOFTWARE",
+      "outputColor": "yellow"
+    },
+
+    {
+      "type": "wm",
+      "key": "│ WM",
+      "keyColor": "red"
+    },
+
+    {
+      "type": "wmtheme",
+      "key": "│ Theme",
+      "keyColor": "red"
+    },
+
+    {
+      "type": "icons",
+      "key": "│ Icons",
+      "keyColor": "red"
+    },
+
+    {
+      "type": "terminal",
+      "key": "│ Terminal",
+      "keyColor": "red"
+    },
+
+    {
+      "type": "terminalfont",
+      "key": "│ Font",
+      "keyColor": "red"
+    },
+
+    {
+      "type": "custom",
+      "format": "╰────────────────────────",
+      "outputColor": "yellow"
+    },
+
+    {
+      "type": "custom",
+      "format": "╭─── HARDWARE",
+      "outputColor": "yellow"
+    },
+
+    {
+      "type": "host",
+      "key": "│ Host",
+      "keyColor": "red"
+    },
+
+    {
+      "type": "cpu",
+      "key": "│ CPU",
+      "keyColor": "red",
+      "temp": true,
+      "showPeCoreCount": true
+    },
+
+    {
+      "type": "gpu",
+      "key": "│ GPU",
+      "keyColor": "red"
+    },
+
+    {
+      "type": "memory",
+      "key": "│ Memory",
+      "keyColor": "red"
+    },
+
+    {
+      "type": "disk",
+      "key": "│ Disk",
+      "keyColor": "red"
+    },
+
+    {
+      "type": "swap",
+      "key": "│ Swap",
+      "keyColor": "red"
+    },
+
+    {
+      "type": "custom",
+      "format": "╰────────────────────────",
+      "outputColor": "yellow"
+    },
+
+    {
+      "type": "custom",
+      "format": "╭─── INFORMATION",
+      "outputColor": "yellow"
+    },
+
+    {
+      "type": "uptime",
+      "key": "│ Uptime",
+      "keyColor": "red"
+    },
+
+    {
+      "type": "datetime",
+      "key": "│ DateTime",
+      "keyColor": "red"
+    },
+
+    {
+      "type": "localip",
+      "key": "│ Local IP",
+      "keyColor": "red"
+    },
+
+    {
+      "type": "publicip",
+      "key": "│ Public IP",
+      "keyColor": "red"
+    },
+
+    {
+      "type": "custom",
+      "format": "╰────────────────────────",
+      "outputColor": "yellow"
+    },
+    {
+      "type": "custom",
+      "format": "\u001b[33m󰮯 \u001b[30m󰊠 \u001b[91m󰊠 \u001b[31m󰊠 \u001b[92m󰊠 \u001b[32m󰊠 \u001b[93m󰊠 \u001b[33m󰊠 \u001b[94m󰊠 \u001b[34m󰊠 \u001b[95m󰊠 \u001b[35m󰊠 \u001b[96m󰊠 \u001b[36m󰊠 \u001b[97m󰊠 \u001b[37m󰊠"
+    }
+  ]
+}
